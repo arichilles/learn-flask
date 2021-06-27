@@ -1,0 +1,14 @@
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+@app.route('/')
+def Index():
+    a = 10
+    b = 3
+    
+    # mengirimkan nilai a dan be ke template
+    return render_template('index.html', a=a, b=b)
+
+if __name__ == '__main__':
+    app.run(debug=True)
